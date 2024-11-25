@@ -1,4 +1,13 @@
 {
-    "welcome": "Hoşgeldiniz",
-    "description": "Bu, i18n desteği olan bir React projesidir."
+    "tr":"Türkçe",
+    "en":"İngilizce",
+    "navigation":{
+      "basic_draw":"BasitKura",
+      "draw_lottery":"Kura Çek",
+      "group_draw":"Grup Kurası",
+      "raffle":"Çekiliş Yap",
+      "coin_toss":"Yazı Tura",
+      "roll_dice":"Zar At",
+      "gift_draw":"Hediye Çekilişi"
+    }
   }

@@ -6,11 +6,13 @@ import Navigation from "./components/Navigation/Navigation";
 function App() {
   return (
     <Router>
-    <div>
-      <Navigation/>
-      <Content/>
-      <Footer/>
-    </div>
+      <div className="flex flex-col min-h-screen">
+        <Navigation />
+        <div className="flex-grow">
+          <Content />
+        </div>
+        <Footer />
+      </div>
     </Router>
   );
 }
