@@ -1,20 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 
 const ChangeLanguage = () => {
   const { t } = useTranslation();
-  const [currentLanguage, setCurrentLanguage] = useState(i18next.language);
+  const currentLanguage = i18next.language;
 
   const supportedLanguages = ["tr", "en"];
 
   const changeLanguage = (lang) => {
     i18next.changeLanguage(lang);
+    localStorage.setItem("language", lang);
   };
 
   useEffect(() => {
-    changeLanguage(currentLanguage);
-  }, [currentLanguage]);
+    const savedLanguage = localStorage.getItem("language");
+    if (savedLanguage) {
+      i18next.changeLanguage(savedLanguage);
+    }
+  }, []);
 
   return (
     <div className="flex gap-2">
@@ -22,7 +26,7 @@ const ChangeLanguage = () => {
         <button
           key={i}
           className={`${currentLanguage === lang ? "underline" : ""}`}
-          onClick={() => setCurrentLanguage(lang)}
+          onClick={() => changeLanguage(lang)}
         >
           {t(lang)}
         </button>

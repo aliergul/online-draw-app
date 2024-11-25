@@ -1,4 +1,13 @@
 {
-    "welcome": "welcome",
-    "description": "description"
+  "tr": "Turkish",
+  "en": "English",
+  "navigation": {
+    "basic_draw": "BasicDraw",
+    "draw_lottery": "Draw Lottery",
+    "group_draw": "Group Draw",
+    "raffle": "Raffle",
+    "coin_toss": "Coin Toss",
+    "roll_dice": "Roll Dice",
+    "gift_draw": "Gift Raffle"
   }
+}
